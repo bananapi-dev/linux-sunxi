@@ -170,7 +170,7 @@ static struct fbtft_device_display displays[] = {
 		.name = "adafruit18",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_st7735r",
-			.max_speed_hz = 32000000,
+			.max_speed_hz = 64000000,
 			.mode = SPI_MODE_0,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
@@ -888,7 +888,7 @@ static struct fbtft_device_display displays[] = {
 		.name = "tm022hdh26",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_ili9341",
-			.max_speed_hz = 32000000,
+			.max_speed_hz = 64000000,
 			.mode = SPI_MODE_0,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
@@ -925,15 +925,15 @@ static struct fbtft_device_display displays[] = {
 		.name = "waveshare22",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_bd663474",
-			.max_speed_hz = 32000000,
+			.max_speed_hz = 64000000,
 			.mode = SPI_MODE_3,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
 					.buswidth = 8,
 				},
 				.gpios = (const struct fbtft_gpio []) {
-					{ "reset", 24 },
-					{ "dc", 25 },
+					{ "reset", 25 },
+					{ "dc", 7 },
 					{},
 				},
 			}
