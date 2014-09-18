@@ -27,6 +27,8 @@ source "drivers/gpu/ion/Kconfig"
 
 source "drivers/gpu/mali/Kconfig"
 
+source "drivers/video/fbtft/Kconfig"
+
 config VGASTATE
        tristate
        default n
