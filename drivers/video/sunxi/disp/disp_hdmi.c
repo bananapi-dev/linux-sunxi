@@ -54,13 +54,13 @@ __s32 BSP_disp_hdmi_open(__u32 sel, __u32 wait_edid)
 		}
 
 		hdmi_clk_on();
-
+/* Sang debug 08/15/2014
 		if (wait_edid && gdisp.init_para.hdmi_wait_edid() == 0) {
 			tv_mod = DISP_TV_MODE_EDID;
 			gdisp.init_para.hdmi_set_mode(tv_mod);
 			gdisp.screen[sel].hdmi_mode = tv_mod;
 		}
-
+*/
 		lcdc_clk_on(sel);
 		image_clk_on(sel);
 

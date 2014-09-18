@@ -1954,6 +1954,7 @@ __s32 Fb_Init(__u32 from)
 			fb_para.mode = (g_fbi.disp_init.scaler_mode[i] == 0) ?
 				DISP_LAYER_WORK_MODE_NORMAL :
 				DISP_LAYER_WORK_MODE_SCALER;
+
 			if (g_fbi.disp_init.disp_mode ==
 			    DISP_INIT_MODE_SCREEN0) {
 				fb_para.fb_mode = FB_MODE_SCREEN0;
@@ -1990,6 +1991,7 @@ __s32 Fb_Init(__u32 from)
 							       fb_para.
 							       primary_screen_id);
 			}
+            printk(KERN_ERR "##fb init:w=%d,h=%d,fbmode=%d\n",fb_para.width,fb_para.height,fb_para.fb_mode); //Sang 08/15/2014
 			Display_Fb_Request(i, &fb_para);
 
 #if 0
